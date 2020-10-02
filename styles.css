@@ -1,0 +1,455 @@
+body {
+  margin: 0px;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: darkslategray;
+}
+header {
+  padding: 30px;
+  background-color: white;
+
+  z-index: 1;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  justify-content: space-evenly;
+  font-size: 25;
+}
+.Titel {
+  order: 1;
+  color: black;
+  position: relative;
+}
+.Titel a {
+  font-size: 25px;
+}
+.Titel a:hover {
+  text-decoration: underline lightseagreen;
+}
+
+.navbarL {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 350px;
+  order: 0;
+}
+.navbarR {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  order: 2;
+}
+.navbar input[type="text"] {
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+  background-color: lightgray;
+}
+.active {
+  color: lightseagreen;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}
+
+.banner1 {
+  max-width: 100%;
+  width: 100vw;
+  height: 60vh;
+}
+.BannerSlide {
+  display: none;
+  height: 60vh;
+}
+.bannerdes {
+  position: relative;
+  bottom: 55vh;
+  background-color: rgb(0, 0, 0, 40%);
+  padding: 10px;
+  display: inline-flex;
+}
+.bannerdes img {
+  width: 200px;
+}
+.bannername {
+  color: white;
+  font-size: 30px;
+  position: relative;
+  margin: 1vw;
+  text-decoration: underline lightseagreen;
+}
+.bannerdes a:hover {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline lightseagreen;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdownContent {
+  z-index: 1;
+  display: none;
+  background-color: white;
+  position: absolute;
+
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdownContent a {
+  padding: 12px 16px;
+  display: block;
+}
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40vh;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 80%);
+}
+.next {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.2s;
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 40%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 40%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.allgames {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-bottom: 5vw;
+  background-color: rgb(0, 0, 0, 10%);
+}
+.game {
+  padding: 5px;
+  border-right: rgb(0, 0, 0, 40%) solid 3px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+}
+.game a {
+  color: white;
+  text-align: center;
+  top: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  position: relative;
+
+  text-decoration: underline lightseagreen;
+
+  font-size: 23px;
+}
+.description {
+  border-right: s;
+  margin: 0px;
+  color: white;
+  width: 140px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.game img {
+  align-self: center;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  width: 150px;
+  margin: 15px;
+}
+.game:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+img.tall {
+  width: 110px;
+  padding: 20px;
+}
+
+.rating {
+  margin: 10px;
+  border-radius: 20px;
+  background-color: seagreen;
+  display: flex;
+  width: 60px;
+  height: 60px;
+}
+
+.rating p {
+  color: white;
+  font-size: 25px;
+  margin: auto;
+}
+.allgamesT {
+  background-color: white;
+}
+.GamesNavbar {
+  background-color: rgb(0, 0, 0, 10%);
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 50px;
+  border-bottom: solid white 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.GamesNavbar a {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.GamesNavbar a:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.GamesNavbar .active {
+  background-color: white;
+  color: black;
+}
+.news {
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 200px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.NewsTitle {
+  margin-top: 2px;
+  padding-left: 20px;
+  color: white;
+  background-color: rgb(0, 0, 0, 10%);
+  padding-top: 10px;
+  border-bottom: solid white;
+}
+.newscontent {
+  padding: 10px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: rgba(0, 0, 0, 80%) solid;
+  background-color: rgb(0, 0, 0, 40%);
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.newscontent img {
+  width: auto;
+  height: 120px;
+}
+
+.newsT {
+  margin: 10px;
+  width: 250px;
+  color: white;
+  font-size: 20px;
+}
+.newsdes {
+  margin-top: 0;
+  align-self: center;
+  color: grey;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 250px;
+}
+.backgroundimg {
+  height: 700px;
+  width: 45vw;
+  grid-row-start: 1;
+  grid-row-end: 8;
+  grid-column: 5;
+  z-index: -1;
+}
+.Game {
+  background-image: -webkit-linear-gradient(
+    -360deg,
+    #243c3c 50%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+
+  margin: 100px;
+  margin-top: 40px;
+  background-color: rgb(0, 0, 0, 20%);
+  display: grid;
+  grid-template-columns: 240px auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+}
+.GameT {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  white-space: nowrap;
+  justify-self: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  align-self: center;
+  color: white;
+}
+.Game .rating {
+  margin-top: 20px;
+  align-self: center;
+}
+.GameBox {
+  margin-left: 20px;
+  margin-top: 20px;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  width: 200px;
+}
+.badshape {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.Tall {
+  justify-self: center;
+  width: auto;
+  height: 200px;
+}
+.Game .description {
+  padding-bottom: 20px;
+  width: auto;
+  grid-row: 2;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+.info {
+  color: white;
+  margin: 0;
+  grid-row: 3;
+  display: flex;
+  border: rgba(255, 255, 255, 0.8) solid;
+  border-bottom: none;
+  border-top: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.players {
+  grid-column: 2;
+}
+.time {
+  border: none;
+  grid-column: 3;
+}
+.age {
+  grid-column: 4;
+}
+.GameDes {
+  margin-top: 5px;
+  padding: 20px;
+  background-color: rgb(0, 0, 0, 40%);
+  margin-left: 30px;
+  line-height: 1.2;
+
+  color: white;
+  grid-row: 5;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.cred {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  font-size: 15px;
+  margin-top: 30px;
+  grid-row: 4;
+}
+.designer {
+  grid-column: 2;
+}
+.artist {
+  grid-column: 3;
+}
+.publisher {
+  grid-column: 4;
+}
+.Buy {
+  white-space: nowrap;
+  margin-left: 30px;
+  color: white;
+  grid-column: 1;
+}
+.OutOfStock {
+  color: darkred;
+}
+footer {
+  margin-top: 10vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgb(0, 0, 0, 50%);
+}
+.socials {
+  display: flex;
+  justify-content: baseline;
+  font-size: 25px;
+}
+.socials i {
+  margin: 10px;
+}
+.newsletter {
+  display: flex;
+}
+.newsletter input {
+  border: none;
+  background-color: darkslategrey;
+  margin: 10px;
+  padding: 2px;
+}
+.newsletter input::placeholder {
+  color: black;
+}
+.top {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 5px 10px 5px 10px;
+  position: fixed;
+  bottom: 5vw;
+  right: 5vw;
+  background-color: rgb(0, 0, 0, 50%);
+}
+.top:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 90%);
+}
